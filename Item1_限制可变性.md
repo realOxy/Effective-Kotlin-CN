@@ -253,9 +253,9 @@ if (list is MutableList) {
 
 此操作的结果是特定于平台的。在 JVM 上，`listOf` 返回实现 Java List 接口的 `Arrays.ArrayList` 实例。此 Java List
 接口具有 `add` 或 `set` 等方法，因此它转换为 Kotlin MutableList 接口。但是，`Arrays.ArrayList` 没有实现其中一些操作。这就是为什么上面代码的结果如下：
-> Exception in thread “main”
-> java.lang.UnsupportedOperationException
-> at java.util.AbstractList.add(AbstractList.java:148)
+> Exception in thread “main”  
+> java.lang.UnsupportedOperationException  
+> at java.util.AbstractList.add(AbstractList.java:148)  
 > at java.util.AbstractList.add(AbstractList.java:108)
 
 尽管不能保证从现在起一年后它会如何表现。基础集合可能会改变。它们可能会被 Kotlin
